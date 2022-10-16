@@ -1,0 +1,15 @@
+{
+  "name": "desktop-clock",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "electron": "^17.0.1",
+    "electron-packager": "^15.4.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . 'Desktop Clock' --out=build/osx --icon=assets/icon.icns"
+  }
+}

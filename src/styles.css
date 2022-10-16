@@ -1,0 +1,140 @@
+:root {
+  --main-0: #eee;
+  --main-1: #ddd;
+
+  --red:  #f33;
+  --gray: #333;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin:  auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  transition: opacity 0.25s;
+  -webkit-app-region: drag;
+}
+
+body:hover {
+  opacity: 0.25;
+}
+
+.clock {
+  width:  115px;
+  height: 115px;
+
+  border: 5px solid var(--main-1);
+  border-radius: 50%;
+
+  background: var(--main-0);
+}
+
+.marking {
+  --deg: 0deg;
+
+  position: absolute;
+  top:  100%;
+  left: 50%;
+
+  transform: translate(-50%, -100%) rotate(var(--deg));
+
+  width:  5px;
+  height: 100%;
+
+  background: var(--gray);
+  border-radius: 2px;
+}
+
+.marking-0   { --deg: 0deg;   }
+.marking-30  { --deg: 30deg;  }
+.marking-n30 { --deg: -30deg; }
+.marking-60  { --deg: 60deg;  }
+.marking-n60 { --deg: -60deg; }
+.marking-270 { --deg: 270deg; }
+
+.inner-clock {
+  position: absolute;
+  left: 50%;
+
+  transform: translate(-50%, 2.5%);
+
+  width:  110px;
+  height: 110px;
+
+  background: var(--main-0);
+  border-radius: 50%;
+}
+
+.pin {
+  position: absolute;
+
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+
+  border-radius: 50%;
+}
+
+.pin-red {
+  position: absolute;
+  top:  52.875%;
+  left: 50%;
+
+  width:  8px;
+  height: 8px;
+
+  background: var(--red);
+  z-index: 10;
+}
+
+.pin-black {
+  position: absolute;
+
+  top:  55%;
+  left: 50%;
+
+  width:  14px;
+  height: 14px;
+
+  background: var(--gray);
+  z-index: 7;
+}
+
+.hand {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+
+  border-radius: 4px;
+}
+
+#hand-hrs {
+  width:  7px;
+  height: 30px;
+
+  background-color: var(--gray);
+}
+
+#hand-mins {
+  width:  5px;
+  height: 50px;
+
+  background-color: var(--gray);
+}
+
+#hand-secs {
+  width:  2.5px;
+  height: 52.5px;
+
+  background-color: var(--red);
+  z-index: 10;
+}
